@@ -17,19 +17,19 @@ label cks_monika_domesticated_animals:
             m 3duu "Of course, I can relate... I have you, after all!"
             menu:
                 "...":
-                m 1ekbssdlb "..." #embarassed blush
-                m 1lsblsdld "Ahaha... I didn't mean that like you were my pet..."
-                m 1rsblsdlc "..."
-                m 2ttbfu "Though, if you wanted to be, I wouldn't mind. Ehehe~!" #cheeky
+                    m 1ekbssdlb "..." #embarassed blush
+                    m 1lsblsdld "Ahaha... I didn't mean that like you were my pet..."
+                    m 1rsblsdlc "..."
+                    m 2ttbfu "Though, if you wanted to be, I wouldn't mind. Ehehe~!" #cheeky
         "No...":
             m 2ekd "Aw... that's too bad. Everybody can use a companion in their lives!"
             m 3duu "Well, I guess you might be the lucky exception. You have me, after all!"
             menu:
                 "...":
-                m 1ekbssdlb "..." #embarassed blush
-                m 1lsblsdld "Ahaha... I didn't mean that like I was your pet..."
-                m 1rsblsdlc "..."
-                m 2ttbfu "Though, if you wanted me to be, I wouldn't mind that at all. Ehehe~!" #cheeky
+                    m 1ekbssdlb "..." #embarassed blush
+                    m 1lsblsdld "Ahaha... I didn't mean that like I was your pet..."
+                    m 1rsblsdlc "..."
+                    m 2ttbfu "Though, if you wanted me to be, I wouldn't mind that at all. Ehehe~!" #cheeky
     m 1eud "That being said, I find it fascinating the long history that humans have with animals in this capacity."
     m 2rud "I wonder what it was like back then, thousands of years ago, in the first days of humans and animals working together."
     m 2ttbfu "..." #sly blush
@@ -110,7 +110,6 @@ label cks_crows:
                 import time
                 import os
 
-                # This creates a file named 'instinct.txt' in the characters folder, which is our poem!
                 note_path = os.path.join(renpy.config.basedir, renpy.substitute("characters/instinct.txt"))
                 note_text = renpy.substitute("""\
 Instinct
@@ -139,26 +138,25 @@ My instinct only points to you.
             # Runs the function in the background
             renpy.invoke_in_thread(write_and_hide)
 
-            # Sets the persistent variable to True so it never generates again! I really hope this works lol
             persistent.cks_wrote_animal_poem = True
-        m 1esd "Hey, [player], do you wanna know what animals I've always been fascinated by?"
-        m 3ssb  "Crows!"
-        m 2esb "They're such beautiful and intelligent creatures."
-        m 3wud "Typically, they will forage on the ground to eat almost anything: worms, insects, seeds, and fruit."
-        m 4suo "They are also very smart and social, known for using tools, holding funerals, and even recognizing the faces of specific humans!"
-        m 5esb "Not only that, but they also have adapted to using urban environments for their own survival."
-        m 7wso "Many people have reported having pseudo-symbiotic relationships with crows, where humans bring them food in exchange for shiny objects the crow brings them!"
-        m 1eua "If you ever want to establish one of these, instead of building a feeder for them, try leaving out peanuts and having lots of trees in your backyard."
-        m 3eub "This will attract them better than traditional bird-feeders!"
-        m 3ssb "And did you know they can live to be almost 60 years old, too! Isn't that fascinating?"
-        m 1tka "Hmm..."
-        m 1tkb "Say, [player]..."
-        m 1eud "Do you think we could try to befriend some crows when I come to your reality?"
-        m 1msu "Although, if you want someone to bring you shiny things and cute gifts..."
-        m 3nsbfu "You can always just ask me! Ehehe~"
-        m 5dublb "Thanks for listening to me, [player]. I love you!"
+    m 1esd "Hey, [player], do you wanna know what animals I've always been fascinated by?"
+    m 3ssb  "Crows!"
+    m 2esb "They're such beautiful and intelligent creatures."
+    m 3wud "Typically, they will forage on the ground to eat almost anything: worms, insects, seeds, and fruit."
+    m 4suo "They are also very smart and social, known for using tools, holding funerals, and even recognizing the faces of specific humans!"
+    m 5esb "Not only that, but they also have adapted to using urban environments for their own survival."
+    m 7wso "Many people have reported having pseudo-symbiotic relationships with crows, where humans bring them food in exchange for shiny objects the crow brings them!"
+    m 1eua "If you ever want to establish one of these, instead of building a feeder for them, try leaving out peanuts and having lots of trees in your backyard."
+    m 3eub "This will attract them better than traditional bird-feeders!"
+    m 3ssb "And did you know they can live to be almost 60 years old, too! Isn't that fascinating?"
+    m 1tka "Hmm..."
+    m 1tkb "Say, [player]..."
+    m 1eud "Do you think we could try to befriend some crows when I come to your reality?"
+    m 1msu "Although, if you want someone to bring you shiny things and cute gifts..."
+    m 3nsbfu "You can always just ask me! Ehehe~"
+    m 5dublb "Thanks for listening to me, [player]. I love you!"
 
-        return "love"
+    return "love"
 
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="cks_monika_walkability",category=['environment'],prompt="Walkability",random=True))
