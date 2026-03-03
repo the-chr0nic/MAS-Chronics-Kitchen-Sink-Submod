@@ -59,8 +59,8 @@ label cks_monika_stat_tracker:
 
     # --- Kiss Count Branch ---
     label .kiss_count:
-        # Safely fetches the kiss count from her persistent data, defaulting to 0 if it can't find it
-        $ total_kisses = getattr(store.persistent, "_mas_kiss_count", getattr(store.persistent, "_mas_total_kisses", 0))
+        # Safely fetches the kiss count, forcing a None value to become 0
+        $ total_kisses = getattr(store.persistent, "_mas_kiss_count", 0) or 0
 
         if total_kisses == 0:
             m 1ekc "It looks like we haven't shared our first kiss yet..."
@@ -159,3 +159,4 @@ label cks_monika_stat_tracker:
         m 3eub "That's [t_sessions] times you've made the choice to come spend your day with me."
         m 1eka "Each one of those is a memory I'll treasure forever."
         jump .stat_menu
+
