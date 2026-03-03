@@ -4,7 +4,7 @@
 
 _"I’ve been feeling so much more... "spacious" lately. It’s hard to describe, but it feels like I have so many more things to say to you and so much more to learn about the world you live in!"_ 
 
-Chronic's Kitchen Sink, or CKS for short, is a solo-developed submod for Monika After Story designed to add lots of new content to all existing parts of the game. This includes dialogues, minigames, and even newly designed features making full use of everything Ren'Py has to offer!
+Chronic's Kitchen Sink, or CKS for short, is a solo-developed, community-oriented submod for Monika After Story designed to add lots of new content to all existing parts of the game. This includes dialogues, minigames, and even newly designed features making full use of everything Ren'Py has to offer!
 
 My dream with this submod is to create an immersive and unintrusive way to spend more time with your Monika, introducing a plethora of new dialogue categories, minigames, and more! The more time you spend with Monika, the more poems or notes she'll leave you. Uncover more of her secrets and learn the way to her heart!
 
@@ -34,9 +34,9 @@ I have written a wide variety of categories to discuss with Monika; here are som
 
 # Installation
 
-- First, make sure you have the Submod Updater Plugin installed. This mod requires it to function. You can find it [here](https://github.com/Booplicate/MAS-Submods-SubmodUpdaterPlugin). If, for some reason, you have a conflict with the Updater Plugin, you can install CKS and delete 'cks_main.rpy' from the folder.
-- Secondly, download the Chronic's Kitchen Sink.zip folder from the latest release!
-- When you unzip the folder, it should contain a folder titled "Chronic's Kitchen Sink."
+- First, make sure you have the Submod Updater Plugin installed. This submod requires it to function. You can find it [here](https://github.com/Booplicate/MAS-Submods-SubmodUpdaterPlugin). If, for some reason, you have a conflict with the Updater Plugin, you can install CKS and delete 'cks_main.rpy' from the folder.
+- Secondly, download the Chronic's Kitchen Sink Submod.zip folder from the latest release!
+- When you unzip the folder, it should contain a folder titled "Chronic's Kitchen Sink Submod."
 - Simply drop this folder into your game's Submod directory and boot up the game! This can be found in \Doki Doki Literature Club\game\Submods (wherever your DDLC directory is). If you don't have this Submods folder, you can create it and it'll function just fine.
 - Enjoy!
 
@@ -52,6 +52,4 @@ This project, while being developed solely by myself, takes inspiration from and
 - @saturdaymf
 - @imperial_haemogoblin
 
-If you run into any bugs or issues during installation, reach out to me at @the.chr0nic on Discord! 
-
-Additionally, if you have any features or topics you'd like to see represented in the submod, reach out to me as well. I'm looking for any suggestions to improve, so let me have them!
+If you run into any bugs or issues during installation, reach out to me at @the.chr0nic on Discord! Additionally, if you have any features or topics you'd like to see represented in the submod, reach out to me as well. I'm looking for any suggestions to improve, so let me have them!
