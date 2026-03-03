@@ -588,7 +588,7 @@ label cks_brb_nap_callback:
     m 1eua "[wb_quip]"
     return
 
-    init 5 python:
+init 5 python:
     addEvent(
         Event(
             persistent.event_database,
