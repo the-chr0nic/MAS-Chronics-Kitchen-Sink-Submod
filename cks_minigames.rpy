@@ -88,11 +88,13 @@ label cks_monika_guess_number:
                 jump .play_again
 
             elif guess < target_num:
-                m 3eua "My number is higher than [guess]! You've got [math.max(0, tries_limit - current_guesses)] tries left."
+                $ tries_left = max(0, tries_limit - current_guesses)
+                m 3eua "My number is higher than [guess]! You've got [tries_left] tries left."
                 jump .hl_loop
 
             else:
-                m 3eua "My number is lower than [guess]! You've got [math.max(0, tries_limit - current_guesses)] tries left."
+                $ tries_left = max(0, tries_limit - current_guesses)
+                m 3eua "My number is lower than [guess]! You've got [tries_left] tries left."
                 jump .hl_loop
 
     # --- Guess the Number Logic ---
