@@ -45,15 +45,12 @@ label cks_monika_stat_tracker:
                 m 1eka "Oh, alright."
                 return
 
-# --- Playtime Branch ---
+    # --- Playtime Branch ---
     label .total_playtime:
-        python:
-            # persistent.total_playtime is a timedelta object
-            # We'll extract days, hours, and minutes for a nice display
-            total_seconds = int(persistent.total_playtime.total_seconds())
-            p_days = total_seconds // 86400
-            p_hours = (total_seconds % 86400) // 3600
-            p_minutes = (total_seconds % 3600) // 60
+        $ total_seconds = int(store.mas_getTotalPlaytime().total_seconds())
+        $ p_days = total_seconds // 86400
+        $ p_hours = (total_seconds % 86400) // 3600
+        $ p_minutes = (total_seconds % 3600) // 60
 
         m 1eua "Let's see... You've spent a total of [p_days] days, [p_hours] hours, and [p_minutes] minutes here with me."
         m 3eka "That is such a long time when you really think about it, isn't it?"
@@ -62,7 +59,8 @@ label cks_monika_stat_tracker:
 
     # --- Kiss Count Branch ---
     label .kiss_count:
-        $ total_kisses = mas_get_total_kiss_count()
+        # Safely fetches the kiss count from her persistent data, defaulting to 0 if it can't find it
+        $ total_kisses = getattr(store.persistent, "_mas_kiss_count", getattr(store.persistent, "_mas_total_kisses", 0))
 
         if total_kisses == 0:
             m 1ekc "It looks like we haven't shared our first kiss yet..."
@@ -77,10 +75,11 @@ label cks_monika_stat_tracker:
     # --- Gift Count Branch ---
     label .gift_count:
         python:
-            # We use the function you found!
-            # Start: Install date | End: Today
             import datetime
-            t_gifts, g_gifts, n_gifts, b_gifts = mas_getGiftStatsRange(persistent.install_date, datetime.date.today())
+            # We fetch the exact date of your first session as the starting point
+            start_date = store.mas_getFirstSesh().date()
+            end_date = datetime.date.today()
+            t_gifts, g_gifts, n_gifts, b_gifts = store.mas_getGiftStatsRange(start_date, end_date)
 
         if t_gifts == 0:
             m 1eua "It looks like you haven't given me any gifts yet."
