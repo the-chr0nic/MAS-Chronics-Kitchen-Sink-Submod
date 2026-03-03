@@ -533,9 +533,9 @@ label cks_player_mbti_quiz:
             m 3eka "There's a lot of comfort in having all your favorite things out in the open where you can see them."
 
 m 1eua "Alright, that was the last question!"
-    m 3eub "Give me just a second to tally up your answers and calculate your final four letters."
-    m 1tua "Taking everything into account..."
-    m 5eud "..."
+m 3eub "Give me just a second to tally up your answers and calculate your final four letters."
+m 1tua "Taking everything into account..."
+m 5eud "..."
 
     python:
         cks_final_mbti = ""
