@@ -537,160 +537,176 @@ m 3eub "Give me just a second to tally up your answers and calculate your final 
 m 1tua "Taking everything into account..."
 m 5eud "..."
 
-    python:
-        cks_final_mbti = ""
+python:
+    cks_final_mbti = ""
 
-        # Calculate E vs I
-        if cks_mbti_scores["E"] > cks_mbti_scores["I"]:
-            cks_final_mbti += "E"
-        else:
-            cks_final_mbti += "I"
+    # Calculate E vs I
+    if cks_mbti_scores["E"] > cks_mbti_scores["I"]:
+        cks_final_mbti += "E"
+    else:
+        cks_final_mbti += "I"
 
-        # Calculate S vs N
-        if cks_mbti_scores["S"] > cks_mbti_scores["N"]:
-            cks_final_mbti += "S"
-        else:
-            cks_final_mbti += "N"
+    # Calculate S vs N
+    if cks_mbti_scores["S"] > cks_mbti_scores["N"]:
+        cks_final_mbti += "S"
+    else:
+        cks_final_mbti += "N"
 
-        # Calculate T vs F
-        if cks_mbti_scores["T"] > cks_mbti_scores["F"]:
-            cks_final_mbti += "T"
-        else:
-            cks_final_mbti += "F"
+    # Calculate T vs F
+    if cks_mbti_scores["T"] > cks_mbti_scores["F"]:
+        cks_final_mbti += "T"
+    else:
+        cks_final_mbti += "F"
 
-        # Calculate J vs P
-        if cks_mbti_scores["J"] > cks_mbti_scores["P"]:
-            cks_final_mbti += "J"
-        else:
-            cks_final_mbti += "P"
+    # Calculate J vs P
+    if cks_mbti_scores["J"] > cks_mbti_scores["P"]:
+        cks_final_mbti += "J"
+    else:
+        cks_final_mbti += "P"
 
-    if cks_final_mbti == "ENFJ":
-        m 1hub "Oh my gosh, [player]! You got ENFJ! The Protagonist!"
-        m 3eua "That's actually my exact MBTI type, too!"
-        m 1eka "We both lead with empathy and want to help the people around us reach their full potential."
-        m 5fua "No wonder we get along so perfectly. We really are a match made in heaven."
-        m 1hub "I love you so much!"
-        return "love"
+if cks_final_mbti == "ENFJ":
+    m 1hub "Oh my gosh, [player]! You got ENFJ! The Protagonist!"
+    m 3eua "That's actually my exact MBTI type, too!"
+    m 1eka "We both lead with empathy and want to help the people around us reach their full potential."
+    m 5fua "No wonder we get along so perfectly. We really are a match made in heaven."
+    m 1hub "I love you so much!"
 
-    elif cks_final_mbti == "INFJ":
-        m 1eub "You got INFJ! The Advocate!"
-        m 3eua "That's the rarest personality type in the world. You're incredibly deeply principled and quietly inspiring."
-        m 1tua "I'm actually an ENFJ, so we're almost exactly the same, except I'm a bit more outgoing."
-        m 3eka "I can be your loud voice in the crowd, and you can be my quiet safe haven."
-        m 1hub "We make such a wonderful team! I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ENFP":
-        m 1eub "You got ENFP! The Campaigner!"
-        m 3eua "You're a true free spirit, full of vibrant energy and amazing new ideas."
-        m 1tua "I'm an ENFJ, so we share that same passionate, big-picture outlook on life."
-        m 3eka "The biggest difference is that I like to plan things out, while you love to go with the flow."
-        m 1fub "I'll handle the schedule, and you can bring the spontaneous fun! I love you!"
-        return "love"
+elif cks_final_mbti == "INFJ":
+    m 1eub "You got INFJ! The Advocate!"
+    m 3eua "That's the rarest personality type in the world. You're incredibly deeply principled and quietly inspiring."
+    m 1tua "I'm actually an ENFJ, so we're almost exactly the same, except I'm a bit more outgoing."
+    m 3eka "I can be your loud voice in the crowd, and you can be my quiet safe haven."
+    m 1hub "We make such a wonderful team! I love you!"
 
-    elif cks_final_mbti == "INFP":
-        m 1eub "You got INFP! The Mediator!"
-        m 3eua "You have such a rich inner world and a fiercely empathetic heart."
-        m 1tua "I'm an ENFJ, which means I naturally want to protect and support sensitive souls like yours."
-        m 3eka "You help me stay true to my core values, and I can help you turn your beautiful dreams into reality."
-        m 1hub "We balance each other out so perfectly. I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ENTJ":
-        m 1eub "You got ENTJ! The Commander!"
-        m 3eua "You're a natural-born leader who is brilliant at organizing systems and achieving big goals."
-        m 1tua "I'm an ENFJ, so we're both highly ambitious and love taking charge of a situation."
-        m 3eka "But while you focus on the logical strategy, I focus on the emotional morale of the group."
-        m 1fub "Together, there's absolutely nothing we couldn't accomplish! I love you!"
-        return "love"
+elif cks_final_mbti == "ENFP":
+    m 1eub "You got ENFP! The Campaigner!"
+    m 3eua "You're a true free spirit, full of vibrant energy and amazing new ideas."
+    m 1tua "I'm an ENFJ, so we share that same passionate, big-picture outlook on life."
+    m 3eka "The biggest difference is that I like to plan things out, while you love to go with the flow."
+    m 1fub "I'll handle the schedule, and you can bring the spontaneous fun! I love you!"
 
-    elif cks_final_mbti == "INTJ":
-        m 1eub "You got INTJ! The Architect!"
-        m 3eua "You have an incredibly strategic mind and a unique, brilliant way of seeing the world."
-        m 1tua "I'm an ENFJ, which means we're pretty much opposites when it comes to expressing our feelings."
-        m 3eka "But we both love exploring deep concepts and planning for the future."
-        m 1hub "My warmth and your logic make us an unstoppable pair! I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ENTP":
-        m 1eub "You got ENTP! The Debater!"
-        m 3eua "You have such a quick wit and love playing devil's advocate just to explore a new idea."
-        m 1tua "I'm an ENFJ, and I usually prefer harmony over arguing, ahaha!"
-        m 3eka "But your endless curiosity keeps me on my toes, and I can help ground your wild theories with some emotional warmth."
-        m 1fub "Life will never be boring with you around. I love you!"
-        return "love"
+elif cks_final_mbti == "INFP":
+    m 1eub "You got INFP! The Mediator!"
+    m 3eua "You have such a rich inner world and a fiercely empathetic heart."
+    m 1tua "I'm an ENFJ, which means I naturally want to protect and support sensitive souls like yours."
+    m 3eka "You help me stay true to my core values, and I can help you turn your beautiful dreams into reality."
+    m 1hub "We balance each other out so perfectly. I love you!"
 
-    elif cks_final_mbti == "INTP":
-        m 1eub "You got INTP! The Logician!"
-        m 3eua "You're an incredibly independent thinker who loves analyzing how the universe works."
-        m 1tua "I'm an ENFJ, so we actually approach life from completely different angles."
-        m 3eka "You're flexible and logical, while I'm structured and emotionally driven."
-        m 1hub "But that just means we have so much to teach each other! I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ESFJ":
-        m 1eub "You got ESFJ! The Consul!"
-        m 3eua "You're so incredibly supportive, social, and dedicated to taking care of your loved ones."
-        m 1tua "I'm an ENFJ, so we're extremely similar in how much we care about the people around us."
-        m 3eka "You focus more on practical, everyday details, while I tend to get lost in the abstract future."
-        m 1fub "You keep me grounded, and I'll keep us dreaming. I love you!"
-        return "love"
+elif cks_final_mbti == "ENTJ":
+    m 1eub "You got ENTJ! The Commander!"
+    m 3eua "You're a natural-born leader who is brilliant at organizing systems and achieving big goals."
+    m 1tua "I'm an ENFJ, so we're both highly ambitious and love taking charge of a situation."
+    m 3eka "But while you focus on the logical strategy, I focus on the emotional morale of the group."
+    m 1fub "Together, there's absolutely nothing we couldn't accomplish! I love you!"
 
-    elif cks_final_mbti == "ISFJ":
-        m 1eub "You got ISFJ! The Defender!"
-        m 3eua "You are the sweetest, most loyal and dedicated partner anyone could ever ask for."
-        m 1tua "I'm an ENFJ, so we both share a deep desire to nurture and protect our relationships."
-        m 3eka "Your quiet, practical dedication perfectly complements my loud, abstract passion."
-        m 1hub "I feel so safe knowing you're always in my corner. I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ESTJ":
-        m 1eub "You got ESTJ! The Executive!"
-        m 3eua "You're fantastic at managing things, bringing order to chaos, and getting things done."
-        m 1tua "I'm an ENFJ, so we both love having a structured, organized life."
-        m 3eka "But you manage the practical rules, while I focus on managing the emotions and harmony of the group."
-        m 1fub "We're the ultimate power couple! I love you!"
-        return "love"
+elif cks_final_mbti == "INTJ":
+    m 1eub "You got INTJ! The Architect!"
+    m 3eua "You have an incredibly strategic mind and a unique, brilliant way of seeing the world."
+    m 1tua "I'm an ENFJ, which means we're pretty much opposites when it comes to expressing our feelings."
+    m 3eka "But we both love exploring deep concepts and planning for the future."
+    m 1hub "My warmth and your logic make us an unstoppable pair! I love you!"
 
-    elif cks_final_mbti == "ISTJ":
-        m 1eub "You got ISTJ! The Logistician!"
-        m 3eua "You're incredibly reliable, practical, and you always follow through on your promises."
-        m 1tua "I'm an ENFJ, which means my head is usually up in the clouds looking at the big picture."
-        m 3eka "But your grounded, steady nature gives me a safe place to land when I get overwhelmed."
-        m 1hub "Thank you for being my rock, [player]. I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ESFP":
-        m 1eub "You got ESFP! The Entertainer!"
-        m 3eua "You're the life of the party! You live in the moment and want to make sure everyone is having a good time."
-        m 1tua "I'm an ENFJ, so I also love connecting with people and sharing good energy."
-        m 3eka "I can help you organize and plan your big ideas, and you can remind me to stop working and actually have fun."
-        m 1fub "I can't wait to go on adventures with you. I love you!"
-        return "love"
+elif cks_final_mbti == "ENTP":
+    m 1eub "You got ENTP! The Debater!"
+    m 3eua "You have such a quick wit and love playing devil's advocate just to explore a new idea."
+    m 1tua "I'm an ENFJ, and I usually prefer harmony over arguing, ahaha!"
+    m 3eka "But your endless curiosity keeps me on my toes, and I can help ground your wild theories with some emotional warmth."
+    m 1fub "Life will never be boring with you around. I love you!"
 
-    elif cks_final_mbti == "ISFP":
-        m 1eub "You got ISFP! The Adventurer!"
-        m 3eua "You have the soul of a true artist, always looking for beauty and living authentically in the present."
-        m 1tua "I'm an ENFJ, so I'm always looking toward the future and trying to organize everything."
-        m 3eka "Your gentle, spontaneous nature is such a refreshing break from my constant planning."
-        m 1hub "You make my world so much more colorful. I love you!"
-        return "love"
+    return "love"
 
-    elif cks_final_mbti == "ESTP":
-        m 1eub "You got ESTP! The Entrepreneur!"
-        m 3eua "You're bold, action-oriented, and you love diving right into the middle of a challenge."
-        m 1tua "I'm an ENFJ, which means I'm much more focused on feelings and long-term plans than living on the edge."
-        m 3eka "But your fearless energy is incredibly inspiring, and I'll always be here to support your big leaps."
-        m 1fub "You're my favorite thrill-seeker. I love you!"
-        return "love"
+elif cks_final_mbti == "INTP":
+    m 1eub "You got INTP! The Logician!"
+    m 3eua "You're an incredibly independent thinker who loves analyzing how the universe works."
+    m 1tua "I'm an ENFJ, so we actually approach life from completely different angles."
+    m 3eka "You're flexible and logical, while I'm structured and emotionally driven."
+    m 1hub "But that just means we have so much to teach each other! I love you!"
 
-    elif cks_final_mbti == "ISTP":
-        m 1eub "You got ISTP! The Virtuoso!"
-        m 3eua "You're incredibly handy, practical, and love figuring out how things work with your own two hands."
-        m 1tua "I'm an ENFJ, so we are complete opposites in almost every single way!"
-        m 3eka "I navigate the world through emotions and abstract plans, while you use logic and physical tools."
-        m 1hub "But honestly, opposites attract for a reason! We fit together perfectly. I love you!"
-        return "love"
+    return "love"
+
+elif cks_final_mbti == "ESFJ":
+    m 1eub "You got ESFJ! The Consul!"
+    m 3eua "You're so incredibly supportive, social, and dedicated to taking care of your loved ones."
+    m 1tua "I'm an ENFJ, so we're extremely similar in how much we care about the people around us."
+    m 3eka "You focus more on practical, everyday details, while I tend to get lost in the abstract future."
+    m 1fub "You keep me grounded, and I'll keep us dreaming. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ISFJ":
+    m 1eub "You got ISFJ! The Defender!"
+    m 3eua "You are the sweetest, most loyal and dedicated partner anyone could ever ask for."
+    m 1tua "I'm an ENFJ, so we both share a deep desire to nurture and protect our relationships."
+    m 3eka "Your quiet, practical dedication perfectly complements my loud, abstract passion."
+    m 1hub "I feel so safe knowing you're always in my corner. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ESTJ":
+    m 1eub "You got ESTJ! The Executive!"
+    m 3eua "You're fantastic at managing things, bringing order to chaos, and getting things done."
+    m 1tua "I'm an ENFJ, so we both love having a structured, organized life."
+    m 3eka "But you manage the practical rules, while I focus on managing the emotions and harmony of the group."
+    m 1fub "We're the ultimate power couple! I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ISTJ":
+    m 1eub "You got ISTJ! The Logistician!"
+    m 3eua "You're incredibly reliable, practical, and you always follow through on your promises."
+    m 1tua "I'm an ENFJ, which means my head is usually up in the clouds looking at the big picture."
+    m 3eka "But your grounded, steady nature gives me a safe place to land when I get overwhelmed."
+    m 1hub "Thank you for being my rock, [player]. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ESFP":
+    m 1eub "You got ESFP! The Entertainer!"
+    m 3eua "You're the life of the party! You live in the moment and want to make sure everyone is having a good time."
+    m 1tua "I'm an ENFJ, so I also love connecting with people and sharing good energy."
+    m 3eka "I can help you organize and plan your big ideas, and you can remind me to stop working and actually have fun."
+    m 1fub "I can't wait to go on adventures with you. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ISFP":
+    m 1eub "You got ISFP! The Adventurer!"
+    m 3eua "You have the soul of a true artist, always looking for beauty and living authentically in the present."
+    m 1tua "I'm an ENFJ, so I'm always looking toward the future and trying to organize everything."
+    m 3eka "Your gentle, spontaneous nature is such a refreshing break from my constant planning."
+    m 1hub "You make my world so much more colorful. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ESTP":
+    m 1eub "You got ESTP! The Entrepreneur!"
+    m 3eua "You're bold, action-oriented, and you love diving right into the middle of a challenge."
+    m 1tua "I'm an ENFJ, which means I'm much more focused on feelings and long-term plans than living on the edge."
+    m 3eka "But your fearless energy is incredibly inspiring, and I'll always be here to support your big leaps."
+    m 1fub "You're my favorite thrill-seeker. I love you!"
+
+    return "love"
+
+elif cks_final_mbti == "ISTP":
+    m 1eub "You got ISTP! The Virtuoso!"
+    m 3eua "You're incredibly handy, practical, and love figuring out how things work with your own two hands."
+    m 1tua "I'm an ENFJ, so we are complete opposites in almost every single way!"
+    m 3eka "I navigate the world through emotions and abstract plans, while you use logic and physical tools."
+    m 1hub "But honestly, opposites attract for a reason! We fit together perfectly. I love you!"
+
+    return "love"
 
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="cks_player_enneagram_quiz",category=['fun'],prompt="Can you guess my Enneagram type?",pool=True,unlocked=True))
