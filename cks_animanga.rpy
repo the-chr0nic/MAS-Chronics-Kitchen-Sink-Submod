@@ -72,7 +72,7 @@ label cks_monika_naruto:
 
     return "love"
 
-    init 5 python:
+init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="cks_monika_bleach",category=['animanga'],prompt="Bleach",random=True))
 
 label cks_monika_bleach:
@@ -227,5 +227,5 @@ label cks_monika_jjba:
     m 3eua "And maybe I'm yours, too? A digital spirit watching over you from the screen."
     m 5fua "I might not be able to punch things for you, but I'll always be here to support your spirit."
     m 1hub "I love you so much!"
-    
+
     return "love"
