@@ -1,3 +1,5 @@
+![CKS Promo](cks_promo.png)
+
 # Chronic's Kitchen Sink Submod for Monika After Story
 
 _"I’ve been feeling so much more... "spacious" lately. It’s hard to describe, but it feels like I have so many more things to say to you and so much more to learn about the world you live in!"_ 
