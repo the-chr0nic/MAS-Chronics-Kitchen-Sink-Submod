@@ -35,7 +35,8 @@ I have written a wide variety of categories to discuss with Monika; here are som
 # Installation
 
 - First, make sure you have the Submod Updater Plugin installed. This submod requires it to function. You can find it [here](https://github.com/Booplicate/MAS-Submods-SubmodUpdaterPlugin). If, for some reason, you have a conflict with the Updater Plugin, you can install CKS and delete 'cks_main.rpy' from the folder.
-- Secondly, download the Chronic's Kitchen Sink Submod.zip folder from the latest release!
+- **IMPORTANT:** This submod is designed for MAS version 0.12.18, which is the latest release. It is _NOT_ tested on any older versions.
+- Next, download the Chronic's Kitchen Sink Submod.zip folder from the latest release!
 - When you unzip the folder, it should contain a folder titled "Chronic's Kitchen Sink Submod."
 - Simply drop this folder into your game's Submod directory and boot up the game! This can be found in \Doki Doki Literature Club\game\Submods (wherever your DDLC directory is). If you don't have this Submods folder, you can create it and it'll function just fine.
 - Enjoy!
