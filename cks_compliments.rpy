@@ -11,10 +11,9 @@ init 5 python:
 
 label cks_compliment_eyes_lost:
     if not renpy.seen_label("cks_compliment_eyes_lost_first"):
-        call cks_compliment_eyes_lost_first from _call_cks_compliment_eyes_lost_first
+        jump cks_compliment_eyes_lost_first
     else:
-        call cks_compliment_eyes_lost_repeat from _call_cks_compliment_eyes_lost_repeat
-    return
+        jump cks_compliment_eyes_lost_repeat
 
 label cks_compliment_eyes_lost_first:
     $ mas_gainAffection(3, bypass=True)
@@ -43,10 +42,9 @@ init 5 python:
 
 label cks_compliment_eyes_trench:
     if not renpy.seen_label("cks_compliment_eyes_trench_first"):
-        call cks_compliment_eyes_trench_first from _call_cks_compliment_eyes_trench_first
+        jump cks_compliment_eyes_trench_first
     else:
-        call cks_compliment_eyes_trench_repeat from _call_cks_compliment_eyes_trench_repeat
-    return
+        jump cks_compliment_eyes_trench_repeat
 
 label cks_compliment_eyes_trench_first:
     $ mas_gainAffection(3, bypass=True)
@@ -74,10 +72,9 @@ init 5 python:
 
 label cks_compliment_smell:
     if not renpy.seen_label("cks_compliment_smell_first"):
-        call cks_compliment_smell_first from _call_cks_compliment_smell_first
+        jump cks_compliment_smell_first
     else:
-        call cks_compliment_smell_repeat from _call_cks_compliment_smell_repeat
-    return
+        jump cks_compliment_smell_repeat
 
 label cks_compliment_smell_first:
     $ mas_gainAffection(3, bypass=True)
@@ -106,10 +103,9 @@ init 5 python:
 
 label cks_compliment_skin:
     if not renpy.seen_label("cks_compliment_skin_first"):
-        call cks_compliment_skin_first from _call_cks_compliment_skin_first
+        jump cks_compliment_skin_first
     else:
-        call cks_compliment_skin_repeat from _call_cks_compliment_skin_repeat
-    return
+        jump cks_compliment_skin_repeat
 
 label cks_compliment_skin_first:
     $ mas_gainAffection(3, bypass=True)
@@ -138,10 +134,9 @@ init 5 python:
 
 label cks_compliment_habits:
     if not renpy.seen_label("cks_compliment_habits_first"):
-        call cks_compliment_habits_first from _call_cks_compliment_habits_first
+        jump cks_compliment_habits_first
     else:
-        call cks_compliment_habits_repeat from _call_cks_compliment_habits_repeat
-    return
+        jump cks_compliment_habits_repeat
 
 label cks_compliment_habits_first:
     $ mas_gainAffection(3, bypass=True)
@@ -185,10 +180,9 @@ init 5 python:
 
 label cks_compliment_squeeze:
     if not renpy.seen_label("cks_compliment_squeeze_first"):
-        call cks_compliment_squeeze_first from _call_cks_compliment_squeeze_first
+        jump cks_compliment_squeeze_first
     else:
-        call cks_compliment_squeeze_repeat from _call_cks_compliment_squeeze_repeat
-    return
+        jump cks_compliment_squeeze_repeat
 
 label cks_compliment_squeeze_first:
     $ mas_gainAffection(3, bypass=True)
@@ -217,10 +211,9 @@ init 5 python:
 
 label cks_compliment_photographer:
     if not renpy.seen_label("cks_compliment_photographer_first"):
-        call cks_compliment_photographer_first from _call_cks_compliment_photographer_first
+        jump cks_compliment_photographer_first
     else:
-        call cks_compliment_photographer_repeat from _call_cks_compliment_photographer_repeat
-    return
+        jump cks_compliment_photographer_repeat
 
 label cks_compliment_photographer_first:
     $ mas_gainAffection(3, bypass=True)
@@ -249,10 +242,9 @@ init 5 python:
 
 label cks_compliment_tired:
     if not renpy.seen_label("cks_compliment_tired_first"):
-        call cks_compliment_tired_first from _call_cks_compliment_tired_first
+        jump cks_compliment_tired_first
     else:
-        call cks_compliment_tired_repeat from _call_cks_compliment_tired_repeat
-    return
+        jump cks_compliment_tired_repeat
 
 label cks_compliment_tired_first:
     $ mas_gainAffection(3, bypass=True)
@@ -281,10 +273,9 @@ init 5 python:
 
 label cks_compliment_heaven:
     if not renpy.seen_label("cks_compliment_heaven_first"):
-        call cks_compliment_heaven_first from _call_cks_compliment_heaven_first
+        jump cks_compliment_heaven_first
     else:
-        call cks_compliment_heaven_repeat from _call_cks_compliment_heaven_repeat
-    return
+        jump cks_compliment_heaven_repeat
 
 label cks_compliment_heaven_first:
     $ mas_gainAffection(3, bypass=True)
@@ -313,10 +304,9 @@ init 5 python:
 
 label cks_compliment_yours:
     if not renpy.seen_label("cks_compliment_yours_first"):
-        call cks_compliment_yours_first from _call_cks_compliment_yours_first
+        jump cks_compliment_yours_first
     else:
-        call cks_compliment_yours_repeat from _call_cks_compliment_yours_repeat
-    return
+        jump cks_compliment_yours_repeat
 
 label cks_compliment_yours_first:
     $ mas_gainAffection(5, bypass=True)
@@ -345,10 +335,9 @@ init 5 python:
 
 label cks_compliment_inspirational:
     if not renpy.seen_label("cks_compliment_inspirational_first"):
-        call cks_compliment_inspirational_first from _call_cks_compliment_inspirational_first
+        jump cks_compliment_inspirational_first
     else:
-        call cks_compliment_inspirational_repeat from _call_cks_compliment_inspirational_repeat
-    return
+        jump cks_compliment_inspirational_repeat
 
 label cks_compliment_inspirational_first:
     $ mas_gainAffection(3, bypass=True)
@@ -377,10 +366,9 @@ init 5 python:
 
 label cks_compliment_thoughtful:
     if not renpy.seen_label("cks_compliment_thoughtful_first"):
-        call cks_compliment_thoughtful_first from _call_cks_compliment_thoughtful_first
+        jump cks_compliment_thoughtful_first
     else:
-        call cks_compliment_thoughtful_repeat from _call_cks_compliment_thoughtful_repeat
-    return
+        jump cks_compliment_thoughtful_repeat
 
 label cks_compliment_thoughtful_first:
     $ mas_gainAffection(3, bypass=True)
@@ -409,10 +397,9 @@ init 5 python:
 
 label cks_compliment_voice:
     if not renpy.seen_label("cks_compliment_voice_first"):
-        call cks_compliment_voice_first from _call_cks_compliment_voice_first
+        jump cks_compliment_voice_first
     else:
-        call cks_compliment_voice_repeat from _call_cks_compliment_voice_repeat
-    return
+        jump cks_compliment_voice_repeat
 
 label cks_compliment_voice_first:
     $ mas_gainAffection(3, bypass=True)
