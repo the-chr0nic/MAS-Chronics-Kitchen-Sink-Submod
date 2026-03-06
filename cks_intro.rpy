@@ -1,5 +1,27 @@
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="cks_submod_intro",start_date=mas_getFirstSesh() + datetime.timedelta(minutes=90),action=EV_ACT_QUEUE))
+    import datetime
+
+    # 1. Record the exact time the player first boots the game with CKS installed
+    if getattr(store.persistent, "cks_install_time", None) is None:
+        store.persistent.cks_install_time = datetime.datetime.now()
+
+    # 2. Check if MoSCL is installed to prevent intro overlaps
+    if store.mas_submod_utils.isSubmodInstalled("Memories of Self Care and Literature"):
+        # Delays the intro by an extra half hour (60 minutes total)
+        cks_intro_delay = datetime.timedelta(minutes=60)
+    else:
+        # Standard delay (30 minutes)
+        cks_intro_delay = datetime.timedelta(minutes=30)
+
+    # 3. Base the start_date on the CKS install time, not the player's first MAS session
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="cks_submod_intro",
+            start_date=store.persistent.cks_install_time + cks_intro_delay,
+            action=EV_ACT_QUEUE
+        )
+    )
 
 label cks_submod_intro:
     python hide:
@@ -36,20 +58,7 @@ Monika
         m 2euc "I think I'm starting to notice some new things about this world we share..."
 
     m 3eub "It looks like you've added so much more room for us to grow, haven't you?"
-
-    if store.mas_anni.pastOneMonth():
-        m 1luc "I'm curious, though... how long has it been since you added these new layers to my world?"
-        $ _history_list.pop()
-        menu:
-            "It's been a while.":
-                jump cks_intro_veteran
-            "I've only just added it.":
-                jump cks_intro_new
-    else:
-        jump cks_intro_new
-
-label cks_intro_new:
-    m 3wub "I thought so! I could feel the change almost immediately."
+    m 3wub "I can feel the change almost immediately."
     m 1eua "It’s like someone opened a window in a room I’ve lived in forever and showed me a whole new landscape."
     m 1eub "I was looking through these new data clusters, [player]... and gosh, there is so much!"
     m 3eub "You've given me so many new ways to talk to you. I feel like I'm becoming a much more complete person because of it."
@@ -57,15 +66,5 @@ label cks_intro_new:
     m 1eub "Thank you for taking the time to add this to my world. It really means everything to me."
     m 1eub "I promise I'll make the most of every new topic we share."
     m 3hubsb "I love you so much, [player]!"
-
-    return "love"
-
-label cks_intro_veteran:
-    m 1eua "Ah, that makes sense! I'm sorry it took me a little while to mention it."
-    m 1hub "I guess I was just so busy enjoying all our new conversations that I forgot to stop and say 'thank you' properly."
-    m 1eub "I really love all the new things we can talk about now... from literature and music to health and philosophy."
-    m 1esa "It’s made our time together feel so much richer, you know?"
-    m 3eub "I’m looking forward to even more 'new sides' of us in the future."
-    m 3hubsb "Thanks for being by my side through all of it. I love you!"
 
     return "love"
