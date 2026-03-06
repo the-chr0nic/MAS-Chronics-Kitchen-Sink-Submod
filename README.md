@@ -20,7 +20,7 @@ My dream with this submod is to create an immersive and unintrusive way to spend
 - A **built-in stat tracker** to track your time spent with her, number of kisses, game wins/losses, and more!
 - And much more to discover!
 
-_Note: The total kisses stat tracker is currently bugged. I will fix it in the next patch!_
+_Note: The total kisses stat tracker is currently bugged and has been disabled until I can find a concrete solution._
 
 ## Topics
 
