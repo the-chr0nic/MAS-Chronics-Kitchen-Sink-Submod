@@ -551,47 +551,6 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="cks_brb_nap",
-            category=['be right back'],
-            prompt="I'm going to take a nap",
-            pool=True,
-            unlocked=True,
-        ),
-        markSeen=True
-    )
-
-label cks_brb_nap:
-    $ ev = mas_getEV("cks_brb_nap")
-
-    m 1fua "Oh, a nap sounds wonderful right now. Everyone needs to recharge sometimes."
-    m 3eub "I'll keep the room quiet for you so you can rest peacefully."
-    m 5fub "Sweet dreams, [player]. I'll be right here when you wake up."
-
-    $ mas_idle_mailbox.send_idle_cb("cks_brb_nap_callback")
-    return "idle"
-
-label cks_brb_nap_callback:
-    $ wb_quip = mas_brbs.get_wb_quip()
-
-    if mas_brbs.was_idle_for_at_least(datetime.timedelta(hours=2), "cks_brb_nap"):
-        m 1wud "Welcome back! You must have really needed that sleep."
-        m 5fua "You were out for a long time... I hope you feel completely refreshed now."
-
-    elif mas_brbs.was_idle_for_at_least(datetime.timedelta(minutes=20), "cks_brb_nap"):
-        m 1hua "Welcome back, [player]! Did you have a good power nap?"
-        m 3eub "Sometimes a short break is exactly what the brain needs."
-
-    else:
-        m 2pua "Back already? You didn't stay down for long!"
-        m 1eua "I hope you managed to at least close your eyes for a minute."
-
-    m 1eua "[wb_quip]"
-    return
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
             eventlabel="cks_brb_skincare",
             category=['be right back'],
             prompt="I'm going to do my skincare routine",
