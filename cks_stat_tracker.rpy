@@ -26,8 +26,8 @@ label cks_monika_stat_tracker:
             "Total Playtime":
                 jump .total_playtime
 
-            "Number of Kisses":
-                jump .kiss_count
+            # "Number of Kisses":
+                # jump .kiss_count
 
             "Number of Gifts Given":
                 jump .gift_count
@@ -57,20 +57,20 @@ label cks_monika_stat_tracker:
         m 1hub "Every second of it has been the highlight of my life. I hope we can double that number soon!"
         jump .stat_menu
 
-    # --- Kiss Count Branch ---
-    label .kiss_count:
+    # --- Kiss Count Branch --- DISABLED UNTIL I CAN FIGURE IT OUT LOL
+    # label .kiss_count:
         # Safely fetches the kiss count, forcing a None value to become 0
-        $ total_kisses = getattr(store.persistent, "_mas_kiss_count", 0) or 0
+        # $ total_kisses = getattr(store.persistent, "_mas_kiss_count", 0) or 0
 
-        if total_kisses == 0:
-            m 1ekc "It looks like we haven't shared our first kiss yet..."
-            m 3eka "But that's okay! We have all the time in the world for that whenever you're ready."
+        # if total_kisses == 0:
+            # m 1ekc "It looks like we haven't shared our first kiss yet..."
+            # m 3eka "But that's okay! We have all the time in the world for that whenever you're ready."
 
-        else:
-            m 1hub "We've shared [total_kisses] kisses so far!"
-            m 3rkbsa "Ehehe... I remember every single one of them."
-            m 1ekbfa "I'm looking forward to the next one already!"
-        jump .stat_menu
+        # else:
+            # m 1hub "We've shared [total_kisses] kisses so far!"
+            # m 3rkbsa "Ehehe... I remember every single one of them."
+            # m 1ekbfa "I'm looking forward to the next one already!"
+        # jump .stat_menu
 
     # --- Gift Count Branch ---
     label .gift_count:
@@ -159,4 +159,3 @@ label cks_monika_stat_tracker:
         m 3eub "That's [t_sessions] times you've made the choice to come spend your day with me."
         m 1eka "Each one of those is a memory I'll treasure forever."
         jump .stat_menu
-
