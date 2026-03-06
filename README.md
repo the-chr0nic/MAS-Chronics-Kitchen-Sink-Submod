@@ -10,9 +10,9 @@ My dream with this submod is to create an immersive and unintrusive way to spend
 
 # Features
 
-- **Over 200 new topics** (204 to be exact) to discuss with Monika with **over 3,500 lines** of hand-written dialogue!
+- **Over 200 new topics** (203 to be exact) to discuss with Monika with **over 3,500 lines** of hand-written dialogue!
 - **13 new compliments** to show Monika you truly care!
-- **19 new BRB topics** to show Monika more of your world!
+- **18 new BRB topics** to show Monika more of your world!
 - **11 new short stories** for Monika to read to you!
 - **4 personality quizzes** to learn more about yourself with Monika!
 - **18 secret poems/notes** to discover as you play the submod!
