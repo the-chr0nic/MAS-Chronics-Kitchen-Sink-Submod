@@ -80,11 +80,13 @@ label cks_monika_guess_number:
                 $ persistent._cks_minigame_stats["hl_wins"] += 1
                 m 1hub "You got it! It was [target_num]!"
                 m 3eub "It only took you [current_guesses] tries. Not bad at all!"
+                $ mas_gainAffection(modifier=0.5)
                 jump .play_again
 
             elif current_guesses >= tries_limit:
                 $ persistent._cks_minigame_stats["hl_losses"] += 1 # Added
                 m 1eka "Aw, you're out of guesses! The number I was thinking of was [target_num]."
+                $ mas_gainAffection(modifier=0.5)
                 jump .play_again
 
             elif guess < target_num:
@@ -128,6 +130,7 @@ label cks_monika_guess_number:
             $ persistent._cks_minigame_stats["gn_losses"] += 1
             m 1eka "Close, but no! I was thinking of [target_num]. Better luck next time!"
 
+        $ mas_gainAffection(modifier=0.5)
         jump .play_again
 
     # --- Call It Logic ---
@@ -155,6 +158,7 @@ label cks_monika_guess_number:
             $ persistent._cks_minigame_stats["ci_losses"] += 1
             m 1tua "Ahaha! Looks like luck was on my side this time."
 
+        $ mas_gainAffection(modifier=0.5)
         jump .play_again
 
     label .play_again:
