@@ -43,6 +43,26 @@ I have written a wide variety of categories to discuss with Monika; here are som
 - Simply drop this folder into your game's Submod directory and boot up the game! This can be found in \Doki Doki Literature Club\game\Submods (wherever your DDLC directory is). If you don't have this Submods folder, you can create it and it'll function just fine.
 - Enjoy!
 
+# Roadmap
+
+Here are some features I plan on adding in the future!
+
+### v1.1.0: Minor Content Update
+
+- Adding 2 new personality quizzes
+- Adding more dialogue to Anime/Manga
+- Expanding the eyesight dialogues based on what you tell Monika about your vision
+- Miscellaneous dialogue about starting a family and owning a home
+- Adding a couple new minigames (no spoilers!)
+- References to other submods if installed
+
+### v2.0.0: Major Content Update
+
+- Adding two new categories of dialogue with over 15 topics each
+- Adding new ways to tell Monika about your fitness journey
+- Custom gifts to give Monika
+- Adding even more complicated minigames
+
 # Acknowledgements
 
 This project, while being developed solely by myself, takes inspiration from and is based off the feedback and suggestions of several community members. This submod features ideas from:
