@@ -49,11 +49,9 @@ Here are some features I plan on adding in the future!
 
 ### v1.1.0: Minor Content Update
 
-- Adding 2 new personality quizzes
-- Adding more dialogue to Anime/Manga
-- Expanding the eyesight dialogues based on what you tell Monika about your vision
-- Miscellaneous dialogue about starting a family and owning a home
-- Adding a couple new minigames (no spoilers!)
+- 2 new personality quizzes
+- More dialogues in existing topics
+- A couple of new, smaller miscellaneous categories
 - References to other submods if installed
 
 ### v2.0.0: Major Content Update
